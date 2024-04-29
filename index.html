@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number !!!</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./assets/game.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1>Guess The Number !!!</h1>
+      <p class="between">(Between 1 to 20)</p>
+      <button type="button" class="btn again">
+        <i class="fa-solid fa-rotate-right fa-xl"></i>
+        <span class="tryAgain">Try Again</span>
+      </button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input
+          type="number"
+          class="guess"
+          placeholder="?"
+          maxlength="2"
+          autofocus
+        />
+        <button type="button" class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="alert">Try Again !!!</p>
+        <audio id="myAudio1" src="./assets/win.mp3" preload="auto"></audio>
+        <audio id="myAudio2" src="./assets/lost.mp3" preload="auto"></audio>
+        <audio id="myAudio3" src="./assets/retry.mp3" preload="auto"></audio>
+        <audio id="myAudio4" src="./assets/click.mp3" preload="auto"></audio>
+        <p class="label-score">
+          <i class="fa-solid fa-bullseye fa-xl"></i> Score:
+          <span class="score">20</span>
+        </p>
+        <p class="label-highscore">
+          <i class="fa-solid fa-trophy fa-xl"></i> Highscore:
+          <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
